@@ -1,0 +1,28 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #5 Userspace Driver
+
+Typescript of catching packets
+** Port is not used, so no packets will appear in the count
+======================================================
+Script started on Sat 13 May 2017 11:31:31 PM PDT
+]0;root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./assign5 
+Initial Value: f0f0f
+Good Packets Received: 0
+Total Packets Received: 0
+Program closed...
+]0;root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./assign5 
+Initial Value: f0f0f
+Good Packets Received: 0
+Total Packets Received: 0
+Program closed...
+]0;root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./assign5 
+Initial Value: f0f0f
+Good Packets Received: 0
+Total Packets Received: 0
+Program closed...
+]0;root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ^C
+]0;root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# exit
+
+Script done on Sat 13 May 2017 11:32:43 PM PDT
+======================================================

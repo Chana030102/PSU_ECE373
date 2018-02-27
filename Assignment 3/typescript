@@ -1,0 +1,47 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #3
+
+Typescript of:
+- unbind e1000e
+- run userspace program
+- rebind e1000e
+
+=============================================================================
+Script started on Mon 01 May 2017 12:17:42 AM PDT
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# echo 0000:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/unbind 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# insmod blinkLEDv3.ko 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# dmesg | tail
+[13918.325016] e1000e 0000:00:19.0 eth0: 10/100 speed: disabling TSO
+[17229.256141] e1000e: eth0 NIC Link is Down
+[17232.132896] e1000e: eth0 NIC Link is Up 100 Mbps Full Duplex, Flow Control: Rx/Tx
+[17232.133013] e1000e 0000:00:19.0 eth0: 10/100 speed: disabling TSO
+[24958.736630] e1000e 0000:03:00.0 eth1: removed PHC
+[24965.754981] (my_pci_driver) Registering PCI Driver...
+[24965.755057] It's dangerous to go alone, take this with you.
+[24965.755384] (my_pci_driver) module loading...
+[24965.755398] Allocated 5 devices at major: 248
+[24965.755406] (my_pci_driver)Tried to register pci driver. Return = 0
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# mknod /dev/hw3)p[K[K_pci c 248 0
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./userspace/assign3 
+Current led_val: 492550
+Current led_val: 78
+End of program.
+
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./userspace/assign3 
+Current led_val: 15
+Current led_val: 78
+End of program.
+
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./userspace/assign3 mknod /dev/hw3_pci c 248 0dmesg | tailinsmod blinkLEDv3.ko echo 0000:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/unbind[1P [1P [1P [1P [1P [1P b i n [1P [1P [1P [39Pinsmod blinkLEDv3.ko[9Pdmesg | tailmknod /dev/hw3_pci c 248 0[6P./userspace/assign3 [Krmmod blinkLEDv3.ko 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_
+hw3_pci     hw3_thao_0  
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_
+hw3_pci     hw3_thao_0  
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_pci 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_pci mod blinkLEDv3.ko./userspace/assign3mknod /dev/hw3_pci c 248 0dmesg | tailinsmod blinkLEDv3.ko [39@echo 0000:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/
+echo 0000:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/ b i n d 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# exit
+
+Script done on Mon 01 May 2017 12:19:19 AM PDT
+=============================================================================

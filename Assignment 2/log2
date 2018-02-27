@@ -1,0 +1,13 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #2 Typescript log #2
+/proc/devices search to show my module loaded
+
+Script started on Wed 19 Apr 2017 09:10:13 AM PDT
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# insmod mycdev.ko 
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# cat /proc/devices | grep mycdev
+249 mycdev
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# rmmod mycdev.ko 
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# exit
+
+Script done on Wed 19 Apr 2017 09:10:36 AM PDT

@@ -1,0 +1,29 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #2 Typscript log #1
+** Before module param **
+
+Script started on Wed 19 Apr 2017 08:44:33 AM PDT
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# insmod mycdev.ko 
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# mknod /dev/mycdev c 249 0
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# ./C_program/assign2 
+Current syscall_val: 40
+Enter an integer to change syscall_val: 50
+Passing the following to driver for conversion: 50
+End of program.
+
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# rmmod mycdev.ko 
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# dmesg | tail
+[78798.411505] (mycdev)Userspace wrote "50" to us
+[78798.411518] (mycdev)syscall_val should be changed: 50
+[78965.111257] (mycdev) module unloaded!
+[79013.168243] (mycdev) module loading...
+[79013.168259] Allocated 5 devices at major: 249
+[79030.271232] (mycdev)successfully opened!
+[79030.271251] (mycdev)User got from us 40
+[79031.045167] (mycdev)Userspace wrote "50" to us
+[79031.045181] (mycdev)syscall_val should be changed: 50
+[79040.071939] (mycdev) module unloaded!
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# exit
+
+Script done on Wed 19 Apr 2017 08:45:22 AM PDT

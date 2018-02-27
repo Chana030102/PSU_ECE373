@@ -1,0 +1,31 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #3
+
+Typescript of:
+- unbind e1000e
+- run userspace program
+- rebind e1000e
+
+========================================================
+Script started on Sun 30 Apr 2017 07:21:51 PM PDT
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# echo 0000.0:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/unbind 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# insmod blinkLEDv3.ko 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# mknod /dev/hw3_pci c 249 0
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./userspace/assign3 
+Current led_val: 492550
+Current led_val: 68
+End of program.
+
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# ./userspace/assign3 
+Current led_val: 15
+Current led_val: 68
+End of program.
+
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rmmod blinkLEDv3.ko 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_pci 
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# rm /dev/hw3_pci mod blinkLEDv3.ko[C./userspace/assign3[Cmknod /dev/hw3_pci c 249 0[5Pinsmod blinkLEDv3.ko [45@echo 0000:03:00.0 > /sys/module/e1000e/drivers/pci\:e1000e/unbind[C[1P[1P
+root@ece373: /home/linux/AaronChan_ECE373root@ece373:/home/linux/AaronChan_ECE373# exit
+
+Script done on Sun 30 Apr 2017 07:23:11 PM PDT
+=========================================================

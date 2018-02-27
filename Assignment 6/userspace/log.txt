@@ -1,0 +1,33 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment 6 - Userspace Typescript
+
+** There will be no signature since there was a problem with 
+** interrupts. LEDs did not light up when pinging.
+======================================================
+Script started on Wed 07 Jun 2017 11:54:36 PM PDT
+;root@ece373: /home/linux/AaronChan/userspaceroot@ece373:/home/linux/AaronChan/userspace# exitcat /proc/interrupts[7Pping 127.0.0.1cat /proc/interrupts[7Pping 127.0.0.1cat /proc/interrupts exit./assign4 
+HEAD: 4
+TAIL: 7
+End of program.
+
+;root@ece373: /home/linux/AaronChan/userspaceroot@ece373:/home/linux/AaronChan/userspace# ./assign4 
+HEAD: 8
+TAIL: 10
+End of program.
+
+;root@ece373: /home/linux/AaronChan/userspaceroot@ece373:/home/linux/AaronChan/userspace# ./assign4 
+HEAD: 8
+TAIL: 11
+End of program.
+
+;root@ece373: /home/linux/AaronChan/userspaceroot@ece373:/home/linux/AaronChan/userspace# ./assign4 
+HEAD: 12
+TAIL: 14
+End of program.
+
+;root@ece373: /home/linux/AaronChan/userspaceroot@ece373:/home/linux/AaronChan/userspace# exit
+
+Script done on Wed 07 Jun 2017 11:55:08 PM PDT
+======================================================
+

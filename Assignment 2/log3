@@ -1,0 +1,28 @@
+Aaron Chan
+ECE373 (Spring 2017)
+Assignment #2 Part D
+
+Script started on Wed 19 Apr 2017 09:11:42 AM PDT
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# insmod mycdev.ko syscall_val=97
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# mknod /dev/cmycdev c 249 0
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# ./cC_program/assign2 
+Current syscall_val: 97
+Enter an integer to change syscall_val: 60
+Passing the following to driver for conversion: 60
+End of program.
+
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# /dmesg | rmmod mycdev.ko 
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# rm /dev/catdmesg | tialail
+[80549.378766] (mycdev) module loading...
+[80549.378783] Allocated 5 devices at major: 249
+[80566.290601] (mycdev) module unloaded!
+[80644.035191] (mycdev) module loading...
+[80644.035208] Allocated 5 devices at major: 249
+[80657.410534] (mycdev)successfully opened!
+[80657.410555] (mycdev)User got from us 97
+[80662.440511] (mycdev)Userspace wrote "60" to us
+[80662.440525] (mycdev)syscall_val should be changed: 60
+[80674.875175] (mycdev) module unloaded!
+root@ece373: /home/linux/Aaron_Chan_ECE373/assign2root@ece373:/home/linux/Aaron_Chan_ECE373/assign2# exit
+
+Script done on Wed 19 Apr 2017 09:12:55 AM PDT
